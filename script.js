@@ -1,7 +1,23 @@
-// Smooth scrolling and small entrance effect.
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
-  link.addEventListener('click', e=>{
-    const target=document.querySelector(link.getAttribute('href'));
-    if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth'});}
+document.addEventListener("DOMContentLoaded", function () {
+
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
+    link.addEventListener("click", function (event) {
+
+      const target = document.querySelector(
+        link.getAttribute("href")
+      );
+
+      if (target) {
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
+
+    });
+
   });
+
 });
